@@ -17,7 +17,7 @@ namespace CD_Jenkins.Web.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your app description page. - test build";
+            ViewBag.Message = "Your app description page. - test build  ";
 
             return View();
         }
