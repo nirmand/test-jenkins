@@ -1,18 +1,19 @@
 ﻿@using CD_Jenkins.Web;
 
 @{
-    ViewBag.Title = "Home Page - Checking hook";
+    ViewBag.Title = "Home";
 }
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
                 <h1>@ViewBag.Title.</h1>
+                <br />
                 <h2>@ViewBag.Message</h2>
             </hgroup>
             <p>
                 Jenkins, Git, and Visual Studio 
-
+                <br />
                 <b>Continuous Integration Demo</b>
             </p>
         </div>
@@ -21,7 +22,7 @@
 <h2>Current Environment: @System.Web.Configuration.WebConfigurationManager.AppSettings["HostingEnvironment"]</h2>
 
 <p>
-    Please do not deploy this to production - 5th Nov, 2015
+    Please do not deploy this to production - we are still in revision mode!!
 </p>
 
 <h4>Version: @typeof(CD_Jenkins.Web.MvcApplication).Assembly.GetName().Version</h4>
