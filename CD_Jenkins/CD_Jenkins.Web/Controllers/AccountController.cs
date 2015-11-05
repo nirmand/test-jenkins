@@ -35,6 +35,7 @@ namespace CD_Jenkins.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
+            //FIXME: Null validation of the Model doesn't look all appropriate for me.
             if (model == null)
             {
                 throw new ArgumentNullException();
