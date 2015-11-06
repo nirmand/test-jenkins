@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -23,6 +24,10 @@ namespace CD_Jenkins.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            DataAnnotationsModelValidatorProvider.RegisterAdapter(
+                typeof(RequiredAttribute),
+                typeof(CustomizedRequiredValidatorAdapter));
         }
     }
 }
